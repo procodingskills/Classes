@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <description>This flow is used to create account and pass created account details as a output</description>
+    <environments>Default</environments>
+    <interviewLabel>Account Create {!$Flow.CurrentDateTime}. 
+Flow Name : Account Create</interviewLabel>
+    <label>Account Create</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>DML</name>
+        <label>DML</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <inputReference>AccountRecord</inputReference>
+    </recordCreates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <screens>
+        <description>This is a Account Screen Details Flow Screen component</description>
+        <name>Account_Details</name>
+        <label>Account Details</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>DML</targetReference>
+        </connector>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <isRequired>false</isRequired>
+            <objectFieldReference>AccountRecord.Name</objectFieldReference>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <isRequired>false</isRequired>
+            <objectFieldReference>AccountRecord.AccountNumber</objectFieldReference>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <isRequired>false</isRequired>
+            <objectFieldReference>AccountRecord.BillingAddress</objectFieldReference>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <isRequired>false</isRequired>
+            <objectFieldReference>AccountRecord.Industry</objectFieldReference>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <isRequired>false</isRequired>
+            <objectFieldReference>AccountRecord.Rating</objectFieldReference>
+        </fields>
+        <helpText>&lt;p&gt;&lt;em&gt;Create a new account by providing all required information&lt;/em&gt;&lt;/p&gt;</helpText>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Account_Details</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <name>AccountRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+</Flow>

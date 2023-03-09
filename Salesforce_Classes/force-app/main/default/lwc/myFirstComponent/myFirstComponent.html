@@ -1,0 +1,14 @@
+<template>
+    <lightning-card  title={title}>
+        <lightning-button label="Get FullName" onclick={generateFullName} slot="actions"></lightning-button>
+        <lightning-button label="Get Users" onclick={retriveUserDetails} slot="actions"></lightning-button>
+        <p class="slds-p-horizontal_small">
+            <lightning-input type="text" label="First Name" data-my-id="firstName" value={firstNameValue} required onchange={handleFirstName}></lightning-input>
+            <lightning-input type="text" label="Last Name" data-my-id="lastName" required></lightning-input>
+            <lightning-input type="text" label="Email" data-my-id="email" required></lightning-input>
+        </p>
+        <p slot="footer">
+            <lightning-input type="text" value="Please Enter First Name and Last Name" disabled label="Full Name"></lightning-input>
+        </p>
+    </lightning-card>
+</template>
