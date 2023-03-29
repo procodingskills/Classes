@@ -10,6 +10,8 @@ public with sharing class ContactTriggerHandler {
   }
 
   public static void run(System.TriggerOperation operationType) {
+    oldContactsMap = (Map<Id, Contact>) Trigger.oldMap;
+
     switch on operationType {
       when AFTER_INSERT {
         afterInsert();
@@ -81,6 +83,7 @@ public with sharing class ContactTriggerHandler {
     if (updateContacts.size() > 0) {
       update updateContacts;
     }
+    ChangeDataBackupService.publishDetails(newContacts, 'Insert', 'Contact');
   }
 
   private static void afterUpdate() {
@@ -141,6 +144,7 @@ public with sharing class ContactTriggerHandler {
       update updateAccounts.values();
       update relatedContacts;
     }
+    ChangeDataBackupService.publishDetails(newContacts, 'Update', 'Contact');
   }
 
   // Finiding Duplicate based on Email or Phone in contact
