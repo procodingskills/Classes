@@ -1,0 +1,15 @@
+<aura:component  implements="force:lightningQuickAction">
+    <aura:attribute name="searchKey" type="String" default ="I am basic"/>
+    <aura:attribute name="displayOutput" type="String" default ="I am basic"/>
+
+    <!--
+        1. Data assignment logics : ! or #
+        2. Data Communication Logic
+        3. User Interaction events 
+        4. Data Change events
+
+    -->
+    <lightning:input aura:id="myId" label="Search" value="{!v.searchKey}" onkeyup="{!c.searchAction}"/>
+    Actual Search Value : {!v.displayOutput} <br/>
+    
+</aura:component>	

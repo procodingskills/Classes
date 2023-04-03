@@ -1,0 +1,4 @@
+<aura:component>
+    <aura:attribute name="searchKey" type="String"/>
+    <lightning:input label="Search Key(CHILD)" value="{!v.searchKey}"/>
+</aura:component>	
