@@ -1,0 +1,20 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="firstName" type="String"/>
+    <aura:attribute name="lastName" type="String"/>
+  <lightning:card title="Data Handling Pattern Types">
+    <aura:set attribute="footer">
+            <lightning:button label="Data Bind" variant="Brand" onclick="{!c.dataBind}"/>
+            <lightning:button label="Value Assign" onclick="{!c.valueAssign}" />
+    </aura:set>
+        <lightning:input label="First Name" value="{!v.firstName}"/>
+        <lightning:input label="Last Name" value="" aura:id="firstName"/>
+        <lightning:input label="Email" value="" onchange="{!c.dataHandling}"/>
+        <div>
+            <p aura:id="st" onclick="{!c.validateMe}" data-value="I am nice1" data-name="I am nice1" data-rating="I am nice1" data-des="I am nice1">I am nice1</p>
+            <br/>
+            <p onclick="{!c.validateMe}" data-value="I am nice2">I am nice2</p>
+            <br/>
+            <p onclick="{!c.validateMe}" data-value="I am nice3">I am nice3</p>
+        </div>
+  </lightning:card>
+</aura:component>	

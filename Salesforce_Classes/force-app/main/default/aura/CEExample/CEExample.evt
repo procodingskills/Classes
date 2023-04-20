@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="This is used to send fro child to parent">
+    <aura:attribute name="searchValue" type="String"/>
+</aura:event>

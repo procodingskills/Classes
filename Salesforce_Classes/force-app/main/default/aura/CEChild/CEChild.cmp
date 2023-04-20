@@ -1,0 +1,7 @@
+<aura:component>
+    <!-- register your component event-->
+    <aura:registerEvent name="cmpEvent" type="c:CEExample"/>
+    <div class="slds-card">
+        <lightning:input type="text" placeholder="Enter the Value for notify" onkeyup="{!c.invokeEventPublisher}"/>
+    </div>
+</aura:component>	

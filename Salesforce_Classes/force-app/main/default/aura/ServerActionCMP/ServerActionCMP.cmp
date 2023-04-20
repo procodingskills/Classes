@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForAllPageTypes,c:AttaributeContainer" controller="AuraExampleServerClass">
+    
+    <!-- When  a component loads I want to call the sereve to get the Name of User displayed-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    Welcome {!v.userName}
+</aura:component>	
