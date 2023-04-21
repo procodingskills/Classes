@@ -5,8 +5,7 @@ public with sharing class BatchClassInvoker {
         Database.executeBatch(obj,2);
     }
     public static void AccountBatchServiceV2(){
-        String whereClass = 'WHERE Id = \'0012w00001GKF2qAAH\'';
-        Map<String,String> fieldSets = new Map<String,String>();
+        String whereClass = 'WHERE Rating = \'Cold\'';
         AccountBatchServiceV2 obj = new AccountBatchServiceV2(null , whereClass);
         Database.executeBatch(obj,2);
     }

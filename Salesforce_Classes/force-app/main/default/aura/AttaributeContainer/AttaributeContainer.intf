@@ -1,0 +1,3 @@
+<aura:interface description="Aura Component Attributes">
+  <aura:attribute name="userName" type="String" default="" description="This will be override by user."/>
+</aura:interface>

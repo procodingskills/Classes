@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:registerEvent name="appEvent" type="c:AppEventExample"/>
+    <div class="slds-card">
+        <lightning:input type="text" label="Enter Text to Publish" aura:id="dataInput"/>
+        <lightning:button label="Publish App Event" onclick="{!c.echoEvent}" variant="brand"/>
+                                                                          
+    </div>
+</aura:component>

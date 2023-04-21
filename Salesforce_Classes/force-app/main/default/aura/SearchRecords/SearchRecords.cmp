@@ -12,4 +12,4 @@
     <lightning:input aura:id="myId" label="Search" value="{!v.searchKey}" onkeyup="{!c.searchAction}"/>
     Actual Search Value : {!v.displayOutput} <br/>
     
-</aura:component>	
+</aura:component>

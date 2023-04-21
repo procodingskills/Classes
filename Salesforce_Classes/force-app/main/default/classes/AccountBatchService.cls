@@ -27,7 +27,6 @@ for (Database.SaveResult sr : results) {
     }
     else {
         // Operation failed, so get all errors                
-
         for(Database.Error err : sr.getErrors()) {
             System.debug('The following error has occurred.');                    
             System.debug(err.getStatusCode() + ': ' + err.getMessage());

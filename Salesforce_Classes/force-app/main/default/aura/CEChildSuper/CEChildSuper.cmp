@@ -1,0 +1,5 @@
+<aura:component>
+    <aura:handler name="cmpEvent" event="c:CEExample" action="{!c.handleEvent}" />
+    <c:CEChild/>
+
+</aura:component>

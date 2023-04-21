@@ -1,0 +1,12 @@
+<aura:component  implements="flexipage:availableForAllPageTypes">
+    <!-- Register Handler for the component event -->
+    <aura:handler name="cmpEvent" event="c:CEExample" action="{!c.handleEvent}" />
+    
+   
+    <div class="slds-card">
+        <c:CEChild aura:id="childId"/>
+        <c:CEChild aura:id="childId"/>
+       The value updated in child component : <lightning:input type="text" aura:id="outputv"/>
+        <lightning:button label="Call Child Method" onclick="{!c.callChild}"/>
+    </div>
+</aura:component>
