@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="noOfContacts" type="List" default="[]"/> 
+    
+    <div class="slds-card">
+        <lightning:input type="text" label="Account Name" aura:id="name"/>
+        <!--lightning:button label="Add New Contact" onclick="{!c.addNewConatct}"/-->
+        <br/>
+        <div style="background-color: beige;">
+       
+           #1.<c:CreateContact aura:id="rec"/><br/>
+           #2.<c:CreateContact aura:id="rec"/><br/>
+           #3.<c:CreateContact aura:id="rec"/><br/>
+       
+        </div>
+        <lightning:button label="Submit" onclick="{!c.submitFormValidation}"/>
+    </div>
+</aura:component>

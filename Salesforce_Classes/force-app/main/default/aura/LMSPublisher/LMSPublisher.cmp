@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <lightning:messageChannel type="ClassMyMessageChannel__c" aura:id="lmsid"/>
+   
+<lightning:card title="LMS Publisher">
+    
+    <lightning:button label="Notify" onclick="{!c.notifyLMS}"/>
+</lightning:card>
+</aura:component>

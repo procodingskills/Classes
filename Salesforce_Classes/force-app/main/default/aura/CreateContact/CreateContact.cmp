@@ -1,0 +1,7 @@
+<aura:component>
+    <aura:method action="{!c.validateInputs}" name="childValidations"></aura:method>
+
+    <lightning:input type="text" label="First Name" aura:id="input" required="true" messageWhenValueMissing="First Name Required"/>
+    <lightning:input type="text" label="Last Name" aura:id="input" messageWhenValueMissing="Last Name Required"/>
+    <lightning:input type="email" label="email" aura:id="input" messageWhenBadInput="Email should be admin@sample.com"/>
+</aura:component>

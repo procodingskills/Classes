@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome">
+    <aura:attribute name="count" type="Integer" default="0"/>
+    <lightning:messageChannel type="ClassMyMessageChannel__c" onMessage="{!c.handleLMS}"/>
+    <lightning:card title="LMS Subscriber">
+       Count : {!v.count}
+        
+    </lightning:card>
+</aura:component>
