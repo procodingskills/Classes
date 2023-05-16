@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Sample LWC Demo">
+        <lightning-input label="First Name" data-my-id="firstName" class="nameclass" value={firstName} onchange={updateFirstName}></lightning-input>
+        <lightning-input label="Last Name" data-my-id="lastName" class="nameclass" value={lastName}></lightning-input>
+        <lightning-input label="Middle Name" data-my-id="middleName" value={middleName} ></lightning-input>
+        <br/>
+        <div lwc:if={fullName}>
+                Full Name : {fullName}
+        </div>
+       <br/>
+       <lightning-button label="Get Full Name" onclick={generateFullName}></lightning-button>
+       <lightning-button label="generateFullNameBulk" onclick={generateFullNameBulk}></lightning-button>
+    </lightning-card>
+
+</template>
