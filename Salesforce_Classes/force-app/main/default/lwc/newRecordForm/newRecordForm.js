@@ -11,11 +11,11 @@ export default class NewRecordForm extends NavigationMixin(LightningElement) {
     objectAPIName = ACCOUNT_NAME;
     formFields = [ACCOUNT_NAME,ACCOUNT_TYPE,ACCOUNT_RATING,ACCOUNT_PHONE];
     recordPageUrl;
-    navigateToRecord(event){
-        const data = event.detail;
+    navigateToRecord(event){N
+        const data = event.detail;N
         this.showTitle("Congratulations","Account is Created" , "success","dismissable" );
         this[NavigationMixin.Navigate](
-            {
+            {N
                 type : 'standard__recordPage',
                 attributes:{
                     "recordId" : data.id,

@@ -1,0 +1,8 @@
+<template>
+    <div class="slds-card">
+        <c-child-search-type oninputupdated={handleChildEvent}></c-child-search-type>
+        <lightning-button label="Get Result From Apex" onclick={apexImperativeCall}></lightning-button>
+        <br/> Totatl Records found : {totalMatchs} <br/>
+        Total Apex Records found : {totalApexMatchs}
+    </div>
+</template>
